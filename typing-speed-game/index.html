@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Typing Speed Game</title>
+ <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ <main class="container">
+ <header>
+ <h1>Typing Speed Game</h1>
+ <p class="tagline">Practice your typing, 60 seconds at a time.</p>
+ </header>
+
+ <section id="status" aria-live="polite">
+ <div class="timer" aria-label="Time remaining">
+ <span id="time">60</span>s
+ </div>
+ <div class="controls">
+ <button id="newTextBtn" type="button">New Text</button>
+ <button id="resetBtn" type="button">Reset</button>
+ </div>
+ </section>
+
+ <section id="promptSection">
+ <p id="prompt" class="prompt" aria-label="Text to type"></p>
+ </section>
+
+ <section id="inputSection">
+ <label for="typed" class="visually-hidden">Type here</label>
+ <textarea id="typed" rows="4" placeholder="Start typing here..." autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+ </section>
+
+ <section id="results" hidden>
+ <h2>Results</h2>
+ <ul>
+ <li><strong>WPM:</strong> <span id="wpm">0</span></li>
+ <li><strong>Accuracy:</strong> <span id="accuracy">0</span>%</li>
+ <li><strong>Correct words:</strong> <span id="correctWords">0</span></li>
+ <li><strong>Total words:</strong> <span id="totalWords">0</span></li>
+ </ul>
+ </section>
+
+ <footer>
+ <small>Built for learning by doing.</small>
+ </footer>
+ </main>
+
+ <script src="script.js" defer></script>
+</body>
+</html>
